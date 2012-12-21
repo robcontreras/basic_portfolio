@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121221030137) do
+ActiveRecord::Schema.define(:version => 20121221150658) do
 
   create_table "goals", :force => true do |t|
     t.string   "name"
@@ -26,12 +26,24 @@ ActiveRecord::Schema.define(:version => 20121221030137) do
     t.string   "title"
     t.string   "url"
     t.string   "video"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
     t.string   "badge_file_name"
     t.string   "badge_content_type"
     t.integer  "badge_file_size"
     t.datetime "badge_updated_at"
+    t.string   "image_one_file_name"
+    t.string   "image_one_content_type"
+    t.integer  "image_one_file_size"
+    t.datetime "image_one_updated_at"
+    t.string   "image_two_file_name"
+    t.string   "image_two_content_type"
+    t.integer  "image_two_file_size"
+    t.datetime "image_two_updated_at"
+    t.string   "image_three_file_name"
+    t.string   "image_three_content_type"
+    t.integer  "image_three_file_size"
+    t.datetime "image_three_updated_at"
   end
 
 end
