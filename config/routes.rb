@@ -1,5 +1,7 @@
 Fotport::Application.routes.draw do
   
+  match 'contact' => 'home#contact', :as => :contact
+  
   match 'app/:id' => 'home#app', :as => :app
   
   resources :goals

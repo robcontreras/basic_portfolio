@@ -79,6 +79,17 @@ body{
 			height: 780px;
 		}
 		
+		ul#contact{
+			text-align: left;
+			list-style: none;
+			
+			li{
+				a{
+					color: #333;
+				}
+			}
+		}
+		
 		div.project_box{
 			width: 211px;
 			display: inline-block;

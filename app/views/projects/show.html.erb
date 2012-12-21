@@ -31,8 +31,8 @@
 <% else %>
 <p>Imágenes de la Aplicación:</p>
 	<%= link_to image_tag("#{@project.image_one(:small)}"), @project.image_one.url(:normal), :class=>"proj_image", :target=>"_blank" %>
-	<%= link_to image_tag("#{@project.image_one(:small)}"), @project.image_two.url(:normal), :class=>"proj_image", :target=>"_blank" %>
-	<%= link_to image_tag("#{@project.image_one(:small)}"), @project.image_three.url(:normal), :class=>"proj_image", :target=>"_blank" %>
+	<%= link_to image_tag("#{@project.image_two(:small)}"), @project.image_two.url(:normal), :class=>"proj_image", :target=>"_blank" %>
+	<%= link_to image_tag("#{@project.image_three(:small)}"), @project.image_three.url(:normal), :class=>"proj_image", :target=>"_blank" %>
 <% end %>
 <%= link_to "Regresar", root_path, :class=>"basic_link" %>
 </div>

@@ -8,4 +8,8 @@ class HomeController < ApplicationController
     @project = Project.find(params[:id])
   end
   
+  def contact
+    
+  end
+  
 end
