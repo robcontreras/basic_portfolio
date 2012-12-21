@@ -11,9 +11,7 @@
 
 
 <% unless @project.video.blank? %>
-	<p class="side_links">
-		<%= link_to "Video", "http://www.youtube.com/watch?v=6TrJruAuWmM", :target=>"_blank" %>
-	</p>
+
 <% end %>
 
 <p>Achievements logrados con la dinámica:</p>
@@ -26,13 +24,17 @@
 	<% end %>
 </ul>
 
-<% unless @project.id > 3 %>
+<% unless @project.id > 2 %>
 	<%= link_to "Ver la App", app_path(@project.id), :class=>"app_link" %>
 <% else %>
-<p>Imágenes de la Aplicación:</p>
-	<%= link_to image_tag("#{@project.image_one(:small)}"), @project.image_one.url(:normal), :class=>"proj_image", :target=>"_blank" %>
-	<%= link_to image_tag("#{@project.image_two(:small)}"), @project.image_two.url(:normal), :class=>"proj_image", :target=>"_blank" %>
-	<%= link_to image_tag("#{@project.image_three(:small)}"), @project.image_three.url(:normal), :class=>"proj_image", :target=>"_blank" %>
+	<% if @project.id == 3 %>
+		<%= link_to "Ver Video", "http://www.youtube.com/watch?v=6TrJruAuWmM", :class=>"app_link", :target=>"_blank" %>
+	<% else %>
+		<p>Imágenes de la Aplicación:</p>
+		<%= link_to image_tag("#{@project.image_one(:small)}"), @project.image_one.url(:normal), :class=>"proj_image", :target=>"_blank" %>
+		<%= link_to image_tag("#{@project.image_two(:small)}"), @project.image_two.url(:normal), :class=>"proj_image", :target=>"_blank" %>
+		<%= link_to image_tag("#{@project.image_three(:small)}"), @project.image_three.url(:normal), :class=>"proj_image", :target=>"_blank" %>
+	<% end %>
 <% end %>
 <%= link_to "Regresar", root_path, :class=>"basic_link" %>
 </div>
