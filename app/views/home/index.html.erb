@@ -1,0 +1,7 @@
+
+<% for project in @projects do %>
+	<div class="project_box">
+		<%= link_to image_tag(project.badge(:normal)), project_path(project) %>
+		<p class="title"><%= project.title %></p>
+	</div>
+<% end %>
